@@ -26,6 +26,28 @@ console.log(isMovie02RecomendedByMe);
 /* Task# 2
 Створіть два обєкти з даних для фільму з попереднього завдання. Придумайте свої назви властивостей.
 */
+
+const movie01 = {
+    title: "Venom: Let There Be Carnage",
+    rating = 7.2,
+    posterUrl = "https://image.tmdb.org/t/p/w1280//rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+    isMovieRecomendedByMe = true,
+    country: USA,
+    releaseDate: '2021-11-13'
+}
+
+console.log(movie01);
+
+const movie02Title = "Clifford the Big Red Dog";
+let movie02Rating = 7.5;
+const movie02PosterUrl = "https://image.tmdb.org/t/p/w1280//ygPTrycbMSFDc5zUpy4K5ZZtQSC.jpg";
+const isMovie02RecomendedByMe = true;
+
+console.log(movie02Title);
+console.log(movie02PosterUrl);
+console.log(movie02Rating);
+console.log(isMovie02RecomendedByMe);
+
 /* Task# 3
 Виведіть в консоль назву фільму з створеного обєкту.
 */
