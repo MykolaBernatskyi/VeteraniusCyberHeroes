@@ -1,57 +1,55 @@
-const movieTitle = "Red Notice";
-let movieRating = 8.8;
-const moviePosterUrl =
-  "https://image.tmdb.org/t/p/w1280/lAXONuqg41NwUMuzMiFvicDET9Y.jpg";
-const isMovieRecomendedByMe = false;
+// const movieTitle = "Red Notice";
+// let movieRating = 8.8;
+// const moviePosterUrl = "https://image.tmdb.org/t/p/w1280/lAXONuqg41NwUMuzMiFvicDET9Y.jpg";
+// const isMovieRecomendedByMe = false;
 
-const secondMovieTitle = movieTitle; // "Red Notice"
-let secondMovieRating = movieRating; // 8.8
-secondMovieRating = 5.6;
+// const secondMovieTitle = movieTitle; // "Red Notice"
+// let secondMovieRating = movieRating; // 8.8
+// secondMovieRating = 5.6;
 
-console.log(movieRating, "movieRating");
-console.log(secondMovieRating, "secondMovieRating");
+// console.log(movieRating, "movieRating");
+// console.log(secondMovieRating, "secondMovieRating");
 
-const movie = {
-  title: "Red Notice",
-  rating: 6.8,
-  posterUrl: "https://image.tmdb.org/t/p/w1280/lAXONuqg41NwUMuzMiFvicDET9Y.jpg",
-  isMovieRecomendedByMe: false,
-};
+// const movie = {
+//   title: "Red Notice",
+//   rating: 6.8,
+//   posterUrl: "https://image.tmdb.org/t/p/w1280/lAXONuqg41NwUMuzMiFvicDET9Y.jpg",
+//   isMovieRecomendedByMe: false,
+// };
 
-movie = {
-  title: "Red Notice",
-};
+// movie = {
+//   title: "Red Notice",
+// };
+//console.log(movie.rating, "movie.rating");
 
-console.log(movie.rating, "movie.rating");
+// const secondMovie = movie;
+// secondMovie.rating = 4.5;
+// console.log(movie.rating, "movie.rating"); // 4.5
 
-const secondMovie = movie;
-secondMovie.rating = 4.5;
-console.log(movie.rating, "movie.rating"); // 4.5
+// console.log(movie.title);
+// const students = ["Ivan", "Olya", "Taras"]; // Array
 
-console.log(movie.title);
-const students = ["Ivan", "Olya", "Taras"]; // Array
+// function pushToArray(array, value) {
+//   const newArrayIndex = array.length;
+//   array[newArrayIndex] = value;
+// }
 
-function pushToArray(array, value) {
-  const newArrayIndex = array.length;
-  array[newArrayIndex] = value;
-}
+// pushToArray(students, "Oleg");
+// pushToArray(students, "Anna");
+// pushToArray(students, "Maria");
 
-pushToArray(students, "Oleg");
-pushToArray(students, "Anna");
-pushToArray(students, "Maria");
+// console.log(students);
+// console.log(students.length);
 
-console.log(students);
-console.log(students.length);
+// const movieCardEl = document.getElementById("movieCardId");
+// const moviePosterEl = movieCardEl.querySelector("img");
+// const movieTitleEl = movieCardEl.querySelector(".movie-info h3");
+// const movieRatingEl = movieCardEl.querySelector(".movie-info span");
 
-const movieCardEl = document.getElementById("movieCardId");
-const moviePosterEl = movieCardEl.querySelector("img");
-const movieTitleEl = movieCardEl.querySelector(".movie-info h3");
-const movieRatingEl = movieCardEl.querySelector(".movie-info span");
-
-moviePosterEl.setAttribute("src", moviePosterUrl);
-moviePosterEl.setAttribute("alt", movieTitle);
-movieTitleEl.innerText = movieTitle;
-movieRatingEl.innerText = movieRating;
+// moviePosterEl.setAttribute("src", moviePosterUrl);
+// moviePosterEl.setAttribute("alt", movieTitle);
+// movieTitleEl.innerText = movieTitle;
+// movieRatingEl.innerText = movieRating;
 
 // 1. Замініть відповідні змінні значеннями для наступних фільмів по черзі:
 // // Movie 1
