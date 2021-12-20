@@ -1,0 +1,23 @@
+#Creating variable, objects of different types
+Ольга Комар
+•
+15 Dec
+10 points
+Due Yesterday
+File movie-card.js
+1. Замініть відповідні змінні значеннями для наступних фільмів по черзі:
+   // Movie 1
+   Venom: Let There Be Carnage
+   7.2
+   https://image.tmdb.org/t/p/w1280//rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg
+   // Movie 2
+   Clifford the Big Red Dog
+   7.5
+   https://image.tmdb.org/t/p/w1280//ygPTrycbMSFDc5zUpy4K5ZZtQSC.jpg
+
+
+2. Створіть два обєкти з даних для фільму з попереднього завдання. Придумайте свої назви властивостей.
+3. Виведіть в консоль назву фільму з створеного обєкту.
+4. Створіть масив моделей машин. Виведіть в консоль довжина масиву і останній елемент цього масиву.
+5. Створіть обєкт про себе. Обєкт має містити мінімум три властивості. Використайте всі типи даних: String, Number, Boolean.
+6. Створіть обєкт про своє місто. Обєкт має містити мінімум три властивості. Використайте всі типи даних: String, Number, Boolean.
