@@ -10659,7 +10659,7 @@ const countries = [
 
 // Функція, що виводить в консоль відомості про Вивести для всіх країн в консоль наступне: 'The capital of countryName is countryCapital. The current population is countryPopulation'. Замість змінних countryName, countryCapital і countryPopulation вставте реальні значення наведені для країн.
  function task_4(array) {
-    array.forEach(element => console.log(`The capital of ${element.name} is ${element.capital}. The current population is ${element.population}`));
+    array.forEach(element => console.log(`The capital of ${element.name} is ${element.capital}. The current population is ${element.population}.`));
     }
 
 // Завдання_1;
