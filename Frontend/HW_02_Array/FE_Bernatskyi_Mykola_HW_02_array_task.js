@@ -10624,6 +10624,8 @@ const countries = [
   },
 ];
 
+
+
 // 1. Вивести в консоль імена всіх країн, які відносяться до регіону Африки
 
 // 2. Створити змінну capital. Написати код, який буде шукати в масиві countries 
@@ -10636,3 +10638,5 @@ const countries = [
 //    'The capital of countryName is countryCapital. The current population is countryPopulation'
 //    Замість змінних countryName, countryCapital і countryPopulation вставте реальні значення країн.
 //    Для прикладу: 'The capital of Ukraine is Kyiv. The current population is 42692393'
+
+ Con
