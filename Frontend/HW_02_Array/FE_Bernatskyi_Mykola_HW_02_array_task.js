@@ -10632,11 +10632,57 @@ const countries = [
 //    країну, столиця якої буде рівна значенню, записаному в змінній capital.
 //    Протестуйте свій код з значеннями capital = 'Kyiv'; capital = 'London';
 
-// 3. Вивести в консоль імена всіх країн, населення яких є більше 10 мільйонів
+// 3. Вивести в консоль імена всіх країн, населення яких є більше 10 мільйонів.
 
 // 4. Вивести для всіх країн в консоль наступне: 
 //    'The capital of countryName is countryCapital. The current population is countryPopulation'
 //    Замість змінних countryName, countryCapital і countryPopulation вставте реальні значення країн.
-//    Для прикладу: 'The capital of Ukraine is Kyiv. The current population is 42692393'
+//    Для прикладу: 'The capital of Ukraine is Kyiv. The current population is 42692393'.
 
- Con
+//**************************************************************************************
+// FE_Bernatskyi_Mykola_HW_02_array_task
+
+// Функція, що виводить в консоль імена всіх країн (з масиву array), які відносяться до певного регіону (reg).
+ function task_1(array, reg) {
+    array.forEach(element => {if(element.region == reg) console.log(element.name)});
+}
+
+// Функція, що виводить в консоль назву країни з вказаною столицею (cap).
+ function task_2(array, cap) {
+    array.forEach(element => {if(element.capital == cap) console.log(element.name)});
+    }
+
+// Функція, що виводить в в консоль імена всіх країн, населення яких є більше визначеного значення (countryPopulation).
+ function task_3(array, countryPopulation) {
+    array.forEach(element => {if(element.population > countryPopulation) console.log(element.name)});
+    }
+
+// Функція, що виводить в консоль відомості про Вивести для всіх країн в консоль наступне: 'The capital of countryName is countryCapital. The current population is countryPopulation'. Замість змінних countryName, countryCapital і countryPopulation вставте реальні значення наведені для країн.
+ function task_4(array) {
+    array.forEach(element => console.log(`The capital of ${element.name} is ${element.capital}. The current population is ${element.population}`));
+    }
+
+// Завдання_1;
+console.log(" Завдання № 1 - Вивести в консоль імена всіх країн, які відносяться до регіону Африки. \n")
+let regionFrom = 'Africa';
+task_1(countries, regionFrom);
+
+// Завдання_2;
+console.log("\n 2. Створити змінну capital. Написати код, який буде шукати в масиві countries країну, столиця якої буде рівна значенню, записаному в змінній capital. Протестуйте свій код з значеннями capital = 'Kyiv'; capital = 'London'. \n")
+let capital = 'Kyiv';
+task_2(countries, capital);
+
+capital = 'London'
+task_2(countries, capital);
+
+// Завдання_3;
+console.log("\n 3. Вивести в консоль імена всіх країн, населення яких є більше 10 мільйонів. \n")
+
+let countryPopulationTest = 10000000;
+task_3(countries, countryPopulationTest);
+
+// Завдання_4;
+console.log("\n 4. Вивести для всіх країн в консоль наступне: 'The capital of countryName is countryCapital. The current population is countryPopulation'. Замість змінних countryName, countryCapital і countryPopulation вставте реальні значення країн. Для прикладу: 'The capital of Ukraine is Kyiv. The current population is 42692393'. \n")
+task_4(countries);
+
+
