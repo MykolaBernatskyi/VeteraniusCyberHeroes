@@ -10783,7 +10783,7 @@ function isShowAllLanguages(inputArray) {
         divElementLang.innerHTML = '<h4> <em> Official languages:</em></h4>';//
         divElement.appendChild(divElementLang);
 
-        // add spam with translations.
+        // add spam with languages.
         for (let l = 0; l <= inputArray[i].languages.length - 1; l++) {
             console.log(inputArray[i].languages[l].name);
             let spanElement = document.createElement("span");
