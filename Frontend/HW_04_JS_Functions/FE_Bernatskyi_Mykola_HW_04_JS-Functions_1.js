@@ -10771,11 +10771,11 @@ const countries = [
 function isShowAllLanguages(inputArray) {
     // add div with country name
     for (let i = 0; i <= inputArray.length - 1; i++) {
-        let divElement = document.createElement("div");                   
-        divElement.classList.add("country");                                        
-        divElement.setAttribute('id', 'country-' + i);            
+        let divElement = document.createElement("div");
+        divElement.classList.add("country");
+        divElement.setAttribute('id', 'country-' + i);
         divElement.innerHTML = '<h3> Country name: ' + inputArray[i].name + '</h3>';
-        document.body.appendChild(divElement);                                      
+        document.body.appendChild(divElement);
         // add div for official languages
         let divElementLang = document.createElement("div");
         divElementLang.classList.add("official-languages");
