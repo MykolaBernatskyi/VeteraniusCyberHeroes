@@ -13,3 +13,4 @@ function isConvertedObjFieldsToArray(obj) {
 }
 
 console.log(isConvertedObjFieldsToArray(triangle));
+console.log(isConvertedObjFieldsToArray({a:2, b:4, c:5, d:6, e:7}));
