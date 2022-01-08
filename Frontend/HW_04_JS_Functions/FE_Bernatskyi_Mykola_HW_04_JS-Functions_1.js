@@ -10771,16 +10771,16 @@ const countries = [
 function isShowAllLanguages(inputArray) {
     // add div with country name
     for (let i = 0; i <= inputArray.length - 1; i++) {
-        let divElement = document.createElement("div");                     // Create a <div> element
-        divElement.classList.add("country");                                        // add class "country"
-        divElement.setAttribute('id', 'country-' + i);            //
-        divElement.innerHTML = '<h3> Country name: ' + inputArray[i].name + '</h3>';//
-        document.body.appendChild(divElement);                                      // Append <div> to <body>
+        let divElement = document.createElement("div");                   
+        divElement.classList.add("country");                                        
+        divElement.setAttribute('id', 'country-' + i);            
+        divElement.innerHTML = '<h3> Country name: ' + inputArray[i].name + '</h3>';
+        document.body.appendChild(divElement);                                      
         // add div for official languages
         let divElementLang = document.createElement("div");
         divElementLang.classList.add("official-languages");
         divElementLang.setAttribute('id', 'official-languages-' + i);
-        divElementLang.innerHTML = '<h4> <em> Official languages:</em></h4>';//
+        divElementLang.innerHTML = '<h4> <em> Official languages:</em></h4>';
         divElement.appendChild(divElementLang);
 
         // add spam with languages.
