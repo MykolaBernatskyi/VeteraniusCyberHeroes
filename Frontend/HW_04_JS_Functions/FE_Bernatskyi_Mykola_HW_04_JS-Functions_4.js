@@ -10761,50 +10761,46 @@ const countries = [
 ];
 
 /**************************************************************************
- 1. Вивестив в html імя країни та список всіх мовах, якими розмовляють в ній. Також вивести імя країни, перекладене іспанською та французькою мовами у форматі:
- Translations:
- ES - Argelia
- FR - Algérie
-
+ 1. (5). Написати функцію, яка приймає на вхід масив країн і вміє вирахувати масив регіонів,
+ до якиї входять ці країни. В масиві регіони не повинні повторюватись.
  */
 
-function isShowAllLanguages(inputArray) {
-    // add div with country name
-    for (let i = 0; i <= inputArray.length - 1; i++) {
-        let divElement = document.createElement("div");                   
-        divElement.classList.add("country");                                        
-        divElement.setAttribute('id', 'country-' + i);            
-        divElement.innerHTML = '<h3> Country name: ' + inputArray[i].name + '</h3>';
-        document.body.appendChild(divElement);                                      
-        // add div for official languages
-        let divElementLang = document.createElement("div");
-        divElementLang.classList.add("official-languages");
-        divElementLang.setAttribute('id', 'official-languages-' + i);
-        divElementLang.innerHTML = '<h4> <em> Official languages:</em></h4>';
-        divElement.appendChild(divElementLang);
-
-        // add spam with languages.
-        for (let l = 0; l <= inputArray[i].languages.length - 1; l++) {
-            console.log(inputArray[i].languages[l].name);
-            let spanElement = document.createElement("span");
-            let textNodeSpan = document.createTextNode("Text");
-            spanElement.appendChild(textNodeSpan);
-            document.getElementById('official-languages-' + i).appendChild(spanElement);
-            spanElement.innerHTML = inputArray[i].languages[l].name + '; \n';
-        }
-
-        // add div for translations.
-        let divElementTranslation = document.createElement("div");
-        divElementTranslation.classList.add("translations");
-        divElementTranslation.setAttribute('id', 'translations-' + i);
-        divElementTranslation.innerHTML = '<h4> <em> Translations: </em> </h4>  <span> ES - '
-            + inputArray[i].translations.es + '; </span>'
-            + '<span> FR - '
-            + inputArray[i].translations.fr + '. </span>';
-        divElement.appendChild(divElementTranslation);
-    }
-
+// Функція перевіряє чи є сктрока (arg) в масиві (stringArray), якщо так то повертає - true , якщо немає то повертає - false;
+function isCheckedValueInArray(stringArray, arg) {
+    return (arg === stringArray.find(element => element === arg));
 }
 
-isShowAllLanguages(countries);
+// Функція повертає назву регіону для країни.
+function isShownRegionForCountry(regionArray, countryName) {
+    for (let i = 0; i <= regionArray.length - 1; i++) {
+        if (countryName === regionArray[i].name) {
+            return regionArray[i].region
+        }
+    }
+    return undefined;
+}
 
+/*
+Тестовий масив для перевірки:
+'Sri Lanka','Syrian Arab Republic' ---> Asia
+'Spain', 'Svalbard and Jan Mayen','Swaziland' ---> Europa
+ 'Sudan', 'Zimbabwe'(*3) ---> Africa
+ */
+const countryTestArray = ['Sri Lanka', 'Spain', 'Sudan', 'Svalbard and Jan Mayen', 'Swaziland', 'Syrian Arab Republic', 'Zimbabwe', 'Zimbabwe', 'Zimbabwe'];
+
+/*
+Написати функцію, яка приймає на вхід масив країн і вміє вирахувати масив регіонів,
+ до якиї входять ці країни. В масиві регіони не повинні повторюватись.
+ */
+function isShownAllRegions(inputCountryArray) {
+    let rez = [];
+    for (let i = 0; i <= inputCountryArray.length - 1; i++) {
+        if (!isCheckedValueInArray(rez, isShownRegionForCountry(countries, inputCountryArray[i]))) {
+            rez.push(isShownRegionForCountry(countries, inputCountryArray[i]))
+        }
+    }
+    return rez;
+}
+
+console.log(countryTestArray);
+console.log(isShownAllRegions(countryTestArray));
